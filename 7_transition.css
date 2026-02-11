@@ -1,0 +1,148 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { font-family: Arial, Helvetica, sans-serif; }
+
+#menuItems{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  background: #000;
+  padding-top: 0;
+}
+
+#menuItems button{
+  width: 100%;
+  display: block;
+  border: 1px solid #111;
+  padding: 18px 12px;
+  font-size: 18px;
+  color: #fff;
+  background: #0b2bd6;
+  cursor: pointer;
+}
+
+#menuItems button:hover{
+  background: #d6a61f;
+  color: #000;
+}
+
+#jumpMenu{
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  background: #d6a61f;
+  border: 1px solid #111;
+
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+}
+
+#recentArticles:hover + #jumpMenu,
+#jumpMenu:hover{
+  display: block;
+}
+
+#jumpMenu li{
+  padding: 0;
+  margin: 0;
+}
+
+#jumpMenu a{
+  display: block;
+  padding: 4px 16px;
+  text-decoration: underline;
+  color: #0b2bd6;
+}
+
+#jumpMenu a:hover{
+  background: #0b2bd6;
+  color: #fff;
+}
+
+main{
+  margin-left: 240px;
+  min-height: 100vh;
+}
+
+header{
+  background: red;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header p{
+  font-size: 46px;
+  margin: 0;
+  font-family: "Comic Sans MS", "Trebuchet MS", cursive; 
+}
+
+h1{
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 46px;
+  margin: 30px 0 10px;
+}
+
+#container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 30px 40px 120px;
+}
+
+#container article{
+  width: 280px;
+  color: #b6b6b6;  
+  transform: scale(1);
+  transition: color 2s, transform 2s;
+}
+
+#container article:hover{
+  color: #222;
+  transform: scale(1.18);
+}
+
+#container article > p:first-of-type::first-letter{
+  font-family: "Times New Roman", Times, serif;
+  font-size: 36px;
+}
+
+#container article > p:last-of-type{
+  color: inherit;
+}
+
+a[href*="google.com"]::after{
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-left: 6px;
+  vertical-align: middle;
+
+  background: url("arrowarrow.png") no-repeat center;
+  background-size: contain;
+}
+
+#thanks{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  margin: 0;
+  padding: 20px 26px;
+  background: #8fd1ff;
+  border: 1px solid #111;
+}
+
+#thanks a{
+  font-size: 34px;
+  font-family: "Times New Roman", Times, serif;
+  color: #0b2bd6;
+}
